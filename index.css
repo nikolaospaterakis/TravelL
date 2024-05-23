@@ -1,0 +1,189 @@
+@keyframes bouncer {
+    0% { transform: translateY(0);}
+    100% { transform: translateY(-100px);}
+}
+
+@font-face {
+    font-family: test;
+    src: url("/Font/PFDinTextCompPro-Regular.ttf");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: test;
+    
+}
+
+main {
+    opacity: 0;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 50% 30% 1fr;
+    grid-template-rows: 10%;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "l . . m"
+    ". i1 . ."
+    ". i1 i2 ."
+    ". c c ."
+    ". i4 i4 ."
+    ". c2 c2 ."
+    ". i3 i3 ."
+    ". c3 c3 ."
+    " . i5 i5 ."
+    "f f f f";
+    padding: 1em 1em 0 1em;
+    width: 100%;
+    grid-row-gap: 3em;
+}
+
+#logo-item {
+    height: 3em;
+    grid-area: l;
+}
+
+main #menu-item {
+    height: 2em;
+    grid-area: m;
+}
+
+main #img-1 {
+    height: 9em;
+    grid-area: i1;
+}
+
+main #img-2 {
+    height: 8em;
+    width: 7em;
+    grid-area: i2;
+}
+
+main #txt-1 {
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+main #txt-1 h1 {
+    font-size: 2.8em;
+    letter-spacing: .1em;
+}
+
+main #txt-1 p {
+    width: 80%;
+    letter-spacing: .05em;
+}
+
+main #img-3 {
+    height: 12em;
+    width: 10em;
+    grid-area: i3;
+    justify-self: center;
+}
+
+main #img-4 {
+    height: 7em;
+    grid-area: i4;
+    align-self: flex-end;
+    justify-self: center;
+}
+
+main #txt-2 {
+    grid-area: c2;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+main #txt-2 h2 {
+    font-size: 2em;
+    letter-spacing: .1em;
+}
+
+main h3 {
+    grid-area: c3;
+    text-align: center;
+    font-size: 1.8em;
+    letter-spacing: .2em;
+}
+
+main #bg {
+    height: 12em;
+    grid-area: i5;
+    justify-self: center;
+}
+
+footer {
+    grid-area: f;
+    text-align: center;
+    border-top: 2px solid black;
+    padding: 1em;
+}
+
+.loader {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    height: 60px;
+    display: flex;
+    text-align: center;
+    font-size: 3em;
+    align-items: flex-end;
+    justify-content: center;
+    color: black;
+    z-index: 100;
+    letter-spacing: .3em;
+    transition: 1s;
+}
+
+.loader div {
+   animation: bouncer .6s ease infinite alternate;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: 0.06s;
+}
+.loader div:nth-child(3) {
+    animation-delay: 0.12s;
+}
+.loader div:nth-child(4) {
+    animation-delay: 0.18s;
+}
+.loader div:nth-child(5) {
+    animation-delay: 0.24s;
+}
+.loader div:nth-child(6) {
+    animation-delay: 0.30s;
+}
+.loader div:nth-child(7) {
+    animation-delay: 0.36s;
+}
+.loader div:nth-child(8) {
+    animation-delay: 0.42s;
+}
+.loader div:nth-child(9) {
+    animation-delay: 0.48s;
+    margin-left: 5px;
+}
+.loader div:nth-child(10) {
+    animation-delay: 0.54s;
+}
+.loader div:nth-child(11) {
+    animation-delay: 0.60s;
+}
+.loader div:nth-child(12) {
+    animation-delay: 0.66s;
+}
+.loader div:nth-child(13) {
+    animation-delay: 0.72s;
+}
+
