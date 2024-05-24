@@ -21,112 +21,119 @@ body {
     
 }
 
-main {
-    opacity: 0;
-    display: grid;
-    height: 100%;
-    grid-template-columns: 1fr 50% 30% 1fr;
-    grid-template-rows: 10%;
-    grid-auto-rows: auto;
-    grid-template-areas: 
-    "l . . m"
-    ". i1 . ."
-    ". i1 i2 ."
-    ". c c ."
-    ". i4 i4 ."
-    ". c2 c2 ."
-    ". i3 i3 ."
-    ". c3 c3 ."
-    " . i5 i5 ."
-    "f f f f";
-    padding: 1em 1em 0 1em;
-    width: 100%;
-    grid-row-gap: 3em;
-}
 
-#logo-item {
-    height: 3em;
-    grid-area: l;
-}
-
-main #menu-item {
-    height: 2em;
-    grid-area: m;
-}
-
-main #img-1 {
-    height: 9em;
-    grid-area: i1;
-}
-
-main #img-2 {
-    height: 8em;
-    width: 7em;
-    grid-area: i2;
-}
-
-main #txt-1 {
-    grid-area: c;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-}
-
-main #txt-1 h1 {
-    font-size: 2.8em;
-    letter-spacing: .1em;
-}
-
-main #txt-1 p {
-    width: 80%;
-    letter-spacing: .05em;
-}
-
-main #img-3 {
-    height: 12em;
-    width: 10em;
-    grid-area: i3;
-    justify-self: center;
-}
-
-main #img-4 {
-    height: 7em;
-    grid-area: i4;
-    align-self: flex-end;
-    justify-self: center;
-}
-
-main #txt-2 {
-    grid-area: c2;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-main #txt-2 h2 {
-    font-size: 2em;
-    letter-spacing: .1em;
-}
-
-main h3 {
-    grid-area: c3;
-    text-align: center;
-    font-size: 1.8em;
-    letter-spacing: .2em;
-}
-
-main #bg {
-    height: 12em;
-    grid-area: i5;
-    justify-self: center;
-}
-
-footer {
-    grid-area: f;
-    text-align: center;
-    border-top: 2px solid black;
-    padding: 1em;
+@media (max-width: 1279px) {
+    main {
+        opacity: 0;
+        display: grid;
+        height: 100%;
+        grid-template-columns: 1fr 50% 30% 1fr;
+        grid-template-rows: 10%;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "l . . m"
+        ". i1 . ."
+        ". i1 i2 ."
+        ". c c ."
+        ". i4 i4 ."
+        ". c2 c2 ."
+        ". i3 i3 ."
+        ". c3 c3 ."
+        " . i5 i5 ."
+        "f f f f";
+        padding: 1em 1em 0 1em;
+        width: 100%;
+        grid-row-gap: 3em;
+    }
+    
+    #logo-item {
+        height: 3em;
+        grid-area: l;
+    }
+    
+    main #menu-item {
+        height: 2em;
+        grid-area: m;
+        justify-self: flex-end;
+    }
+    
+    main #img-1 {
+        height: 9em;
+        grid-area: i1;
+        justify-self: center;
+    }
+    
+    main #img-2 {
+        height: 8em;
+        width: 7em;
+        grid-area: i2;
+        justify-self: center;
+    }
+    
+    main #txt-1 {
+        grid-area: c;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        justify-self: center;
+    }
+    
+    main #txt-1 h1 {
+        font-size: 2.8em;
+        letter-spacing: .1em;
+    }
+    
+    main #txt-1 p {
+        width: 80%;
+        letter-spacing: .05em;
+    }
+    
+    main #img-3 {
+        height: 12em;
+        width: 10em;
+        grid-area: i3;
+        justify-self: center;
+    }
+    
+    main #img-4 {
+        height: 7em;
+        grid-area: i4;
+        align-self: flex-end;
+        justify-self: center;
+    }
+    
+    main #txt-2 {
+        grid-area: c2;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    main #txt-2 h2 {
+        font-size: 2em;
+        letter-spacing: .1em;
+    }
+    
+    main h3 {
+        grid-area: c3;
+        text-align: center;
+        font-size: 1.6em;
+        letter-spacing: .2em;
+    }
+    
+    main #bg {
+        height: 12em;
+        grid-area: i5;
+        justify-self: center;
+    }
+    
+    footer {
+        grid-area: f;
+        text-align: center;
+        border-top: 2px solid black;
+        padding: 1em;
+    }
 }
 
 .loader {
@@ -187,3 +194,153 @@ footer {
     animation-delay: 0.72s;
 }
 
+@media (min-width: 720px ) {
+
+    main {
+        grid-row-gap: 2em;
+        grid-template-columns: 1fr 45% 30% 1fr;
+        grid-template-areas: 
+        "l . . m"
+        ". i1 . ."
+        ". i1 i2 ."
+        ". c c ."
+        ". i4 i4 ."
+        ". c2 i3 ."
+        ". i5 c3 ."
+        "f f f f";
+    }
+
+    main #img-1 {
+        height: 12em;
+    }
+
+    main #img-2 {
+        height: 10em;
+        width: 9em;
+    }
+
+    main #txt-1 h1 {
+        font-size: 4em;
+    }
+
+    main #txt-2 {
+        align-self: center;
+    }
+
+    main #txt-2, main #img-3, main #img-4, main #bg {
+        margin-top: 5em;
+    }
+    
+
+    main h3 {
+        align-self: center;
+        margin-top: 3em;
+    }
+
+    .loader {
+        left: 38%;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    main {
+        opacity: 0;
+        padding: 0 2em;
+        display: grid;
+        height: 100%;
+        grid-template-columns:  1fr 1fr 4fr 3fr 1fr;
+        grid-template-rows: 10vh 10vh 10vh 45vh auto;
+        grid-template-areas: 
+           "l . i1 i2 m"
+           ". . i1 i2 c3"
+           "c2 c2 i1 i2 ."
+           "i3 i3 c c ."
+           ". . i4 i4 .";
+           grid-gap: 0em;
+        }
+
+     main #bg, footer {
+        display: none;
+    }
+
+    #logo-item {
+        grid-area: l;
+        width: 30%;
+        align-self: flex-end;
+    }
+
+    #menu-item {
+        grid-area: m;
+        width: 20%;
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+
+
+    main #img-1 {
+        grid-area: i1;
+        height: 20em;
+    }
+
+    #img-2 {
+        grid-area: i2;
+        align-self: center;
+    }
+
+    #txt-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        grid-area: c;
+        align-self: center;
+    }
+
+    main #txt-1 h1 {
+        font-size: 6em;
+        letter-spacing: .2em;
+    }
+
+    #txt-1 p {
+        width: 50%;
+    }
+
+    #txt-2 {
+        grid-area: c2;
+        width: 80%;
+    }
+
+    #txt-2 h2 {
+        font-size: 2.6em;
+        letter-spacing: .1em;
+    }
+
+    #img-3 {
+        grid-area: i3;
+        width: 50%;
+    }
+
+    #img-4 {
+        grid-area: i4;
+        width: 30%;
+        justify-self: center;
+        transform: translate(-30%, 8%);
+    }
+
+    main h3 {
+        grid-area: c3;
+        font-size: 2em;
+        text-align: right;
+        width: 100%;
+        letter-spacing: .1em;
+        justify-self: flex-end;
+    }
+
+    .loader {
+        font-size: 5em;
+        left: 40%;
+    }
+
+}
+
+/*  */
